@@ -5,13 +5,8 @@ birds:
   - finch
   - sparrow
 ---
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>{{ title }}</title>
-</head>
-<body>
+{% include _head.html %}
+
     <h1>{{ title }}</h1>
 
     <ul>
@@ -20,5 +15,4 @@ birds:
         {%- endfor -%}
     </ul>
 
-</body>
-</html>
+{% include _foot.html %}
