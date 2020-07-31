@@ -1,6 +1,7 @@
 ---
 layout: layout.html
+title: Animals About Page 2
 ---
-# Animals About Page
+# {{ title }}
 
 This is the Animals about page
