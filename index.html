@@ -1,5 +1,9 @@
 ---
 title: Birds
+birds:
+  - robin
+  - finch
+  - sparrow
 ---
 <!DOCTYPE html>
 <html>
@@ -9,5 +13,12 @@ title: Birds
 </head>
 <body>
     <h1>{{ title }}</h1>
+
+    <ul>
+        {%- for bird in birds -%}
+        <li>{{ bird }}</li>
+        {%- endfor -%}
+    </ul>
+
 </body>
 </html>
