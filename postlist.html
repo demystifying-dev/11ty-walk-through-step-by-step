@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Posts</title>
+</head>
+<body>
+    <ul>
+        {% for post in collections.post -%}
+        <li>{{ post.data.title }}, {{ post.data.date }}</li>
+        {% endfor -%}
+    </ul>
+</body>
+</html>
