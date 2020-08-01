@@ -3,10 +3,10 @@ title: Fish Paged
 pagination:
   data: fishList.fish
   size: 2
-permalink: "fishes/{% if pagination.pageNumber>0 %}page-{{ pagination.pageNumber | plus: 1 }}{% endif %}/index.html"
+permalink: "fishes/{% if pagination.pageNumber>0 %}page-{{ pagination.pageNumber + 1 }}{% endif %}/index.html"
 ---
 
-{% include _head.html %}
+{% include "_head.njk" %}
 <h1>{{ title }}</h1>
 <ul>
   {% for fish in pagination.items -%}
@@ -20,7 +20,7 @@ permalink: "fishes/{% if pagination.pageNumber>0 %}page-{{ pagination.pageNumber
   </li>
 
   <li>
-    Page {{ pagination.pageNumber | plus: 1 }}
+    Page {{ pagination.pageNumber + 1 }}
   </li>
 
   <li>
@@ -29,4 +29,4 @@ permalink: "fishes/{% if pagination.pageNumber>0 %}page-{{ pagination.pageNumber
   </li>
   <li><a href="{{ pagination.href.last }}">Last</a></li>
 </ul>
-{% include _foot.html %}
+{% include "_foot.njk" %}

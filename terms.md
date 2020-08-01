@@ -1,5 +1,6 @@
 ---
 title: title from terms
-layout: layout.html
+layout: layout.njk
 ---
+
 these are the terms
