@@ -1,9 +1,15 @@
-[
-    "lion",
-    "zebra",
-    "cat",
-    "wolf",
-    "dog",
-    "gorilla",
-    "tapir"
-]
+{
+    "big": [
+        "lion",
+        "zebra",
+        "wolf",
+        "dog",
+        "gorilla",
+        "tapir"
+    ],
+    "small": [
+        "cat",
+        "rabbit",
+        "mouse"
+    ]
+}

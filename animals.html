@@ -3,8 +3,15 @@ title: Animals
 ---
 {% include _head.html %}
 <h1>{{ title }}</h1>
+<h2>Big</h2>
 <ul>
-    {% for animal in mammals.animalList -%}
+    {% for animal in mammals.animalList.big -%}
+    <li>{{ animal }}</li>
+    {% endfor -%}
+</ul>
+<h2>Small</h2>
+<ul>
+    {% for animal in mammals.animalList.small -%}
     <li>{{ animal }}</li>
     {% endfor -%}
 </ul>
