@@ -3,7 +3,7 @@ title: Fish Paged
 pagination:
   data: fishList.fish
   size: 2
-permalink: "fishes/page-{{ pagination.pageNumber }}/index.html"
+permalink: "fishes/{% if pagination.pageNumber>0 %}page-{{ pagination.pageNumber | plus: 1 }}{% endif %}/index.html"
 ---
 
 {% include _head.html %}
