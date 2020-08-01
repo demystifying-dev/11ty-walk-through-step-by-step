@@ -1,4 +1,5 @@
-[
+{
+  "fish": [
     "perch",
     "bass",
     "bream",
@@ -11,5 +12,7 @@
     "swordfish",
     "tuna",
     "carp",
+    "salmon",
     "guppy"
-]
+  ]
+}
