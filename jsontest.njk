@@ -1,0 +1,23 @@
+---js
+{
+    title: "JS test page",
+    body: "body text from JS",
+    arctics : function() {
+        var arctics = ["walrus", "penguin", "puffin", "polar bear"];
+        return arctics.sort();
+    }
+}
+---
+<!DOCTYPE html>
+<html>
+<head>
+     <title>{{ title }}</title>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    {{ body }}
+    {% for arctic in arctics() -%}
+        {{ loop.index }}. {{ arctic }}
+    {% endfor -%}
+</body>
+</html>
