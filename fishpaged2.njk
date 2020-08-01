@@ -1,0 +1,26 @@
+---js
+{
+  title: "Fish Paged 2",
+  pagination: {
+    data: "fishList.fish",
+    size: 3,
+    before: function(data) {
+      return data.map(item => 'Fish of the day: '+ item);
+    }
+  }
+}
+---
+<!DOCTYPE html>
+<html>
+<head>
+     <title>{{ title }}</title>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <ul>
+        {% for fish in pagination.items -%}
+        <li>{{ fish }}</li>
+        {% endfor -%}
+    </ul>
+</body>
+</html>
