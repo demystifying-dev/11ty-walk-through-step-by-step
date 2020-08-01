@@ -1,0 +1,11 @@
+---
+title: Animals
+---
+{% include _head.html %}
+<h1>{{ title }}</h1>
+<ul>
+    {% for animal in animalList -%}
+    <li>{{ animal }}</li>
+    {% endfor -%}
+</ul>
+{% include _foot.html %}
