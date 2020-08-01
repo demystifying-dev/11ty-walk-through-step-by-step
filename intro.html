@@ -1,0 +1,6 @@
+{% include _head.html %}
+<h1>Intro</h1>
+{% for item in intro -%}
+{{ item | safe }}
+{% endfor -%}
+{% include _foot.html %}
