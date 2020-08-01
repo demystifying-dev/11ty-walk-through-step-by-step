@@ -13,4 +13,20 @@ permalink: "fishes/{% if pagination.pageNumber>0 %}page-{{ pagination.pageNumber
   <li>{{ fish }}</li>
   {% endfor -%}
 </ul>
+<hr />
+<ul>
+    <li><a href="{{ pagination.href.first }}">First</a></li>
+    <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+  </li>
+
+  <li>
+    Page {{ pagination.pageNumber | plus: 1 }}
+  </li>
+
+  <li>
+    {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{%
+    else %}Next{% endif %}
+  </li>
+  <li><a href="{{ pagination.href.last }}">Last</a></li>
+</ul>
 {% include _foot.html %}
