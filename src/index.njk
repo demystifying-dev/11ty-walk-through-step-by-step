@@ -11,6 +11,9 @@ birds:
 
     <h1>{{ title }}</h1>
     {% shorttest subtitle, greeting %}
+    {% pairedtest subtitle, greeting %}
+      Paired Shortcode Content
+    {% endpairedtest %}
     <ul>
         {%- for bird in birds -%}
         <li>{{ bird }}</li>

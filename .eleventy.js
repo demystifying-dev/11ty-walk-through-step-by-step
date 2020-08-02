@@ -10,7 +10,22 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("shorttest", function (subtitle, greeting) {
     return "<h2><em>" + subtitle + "</em>, " + greeting + "</h2>";
   });
-
+  eleventyConfig.addPairedShortcode("pairedtest", function (
+    data,
+    subtitle,
+    greeting
+  ) {
+    return (
+      "<h3>" +
+      subtitle +
+      "</h3><h4>" +
+      greeting +
+      "</h4>" +
+      "<p><em>" +
+      data +
+      "</em></p>"
+    );
+  });
   return {
     dir: {
       output: "dist",
