@@ -47,6 +47,12 @@ module.exports = function (eleventyConfig) {
     return coll;
   });
 
+  // new collection from data in templates
+  eleventyConfig.addCollection("dataCollection", function (collection) {
+    var coll = collection.getFilteredByGlob("**/index.njk");
+    return coll;
+  });
+
   return {
     dir: {
       output: "dist",

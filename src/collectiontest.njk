@@ -28,4 +28,18 @@ title: Collections Test
     {% endfor -%}
 </ul>
 
+<h2>New Data Collection</h2>
+<ul>
+{% for item in collections.dataCollection -%}
+    <li>
+    {{ item.data.title }}, {{ item.url }}, {{ item.date }}, {{ item.data.birds }}
+        <ul>
+            {% for bird in item.data.birds -%}
+            <li>{{ bird }}</li>
+            {% endfor -%}
+        </ul>
+    </li>
+{% endfor -%}
+</ul>
+
 {% include "_foot.njk" %}
