@@ -4,6 +4,7 @@ pagination:
   data: fishList.fish
   size: 2
 permalink: "fishes/{% if pagination.pageNumber>0 %}page-{{ pagination.pageNumber + 1 }}{% endif %}/index.html"
+tags: fishtag
 ---
 
 {% include "_head.njk" %}

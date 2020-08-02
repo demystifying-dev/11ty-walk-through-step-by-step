@@ -41,6 +41,12 @@ module.exports = function (eleventyConfig) {
     return pageCollection;
   });
 
+  // new collection from tags in templates
+  eleventyConfig.addCollection("templateTagCollection", function (collection) {
+    var coll = collection.getFilteredByTag("fishtag");
+    return coll;
+  });
+
   return {
     dir: {
       output: "dist",

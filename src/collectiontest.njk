@@ -21,4 +21,11 @@ title: Collections Test
     {% endfor -%}
 </ul>
 
+<h4>New Tag from Template Collection</h4>
+<ul>
+    {% for item in collections.templateTagCollection -%}
+    <li>{{ item.data.title }}, {{ item.url }}, {{ item.date }}, {{ item.data.fishList.fish }}</li>
+    {% endfor -%}
+</ul>
+
 {% include "_foot.njk" %}
