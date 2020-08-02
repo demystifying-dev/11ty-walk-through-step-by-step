@@ -7,6 +7,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("dateformat", function (dateIn) {
     return moment(dateIn).tz("GMT").format("YYYY MMMM DD, dddd, HH:MM:SS z");
   });
+  eleventyConfig.addShortcode("shorttest", function (subtitle, greeting) {
+    return "<h2><em>" + subtitle + "</em>, " + greeting + "</h2>";
+  });
 
   return {
     dir: {
