@@ -1,0 +1,16 @@
+---
+title: Collections Test
+---
+{% include "_head.njk" %}
+<h1>{{ title }}</h1>
+<h2>New Post Collection</h2>
+<ul>
+    {% for item in collections.testCollection01 -%}
+    <li>
+    <h4>{{ item.data.title }}</h4>
+    <small>{{ item.date | dateformat }}</small>
+    {{ item.templateContent | safe }}
+    </li>
+    {% endfor -%}
+</ul>
+{% include "_foot.njk" %}

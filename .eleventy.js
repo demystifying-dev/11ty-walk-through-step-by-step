@@ -26,6 +26,14 @@ module.exports = function (eleventyConfig) {
       "</em></p>"
     );
   });
+
+  // Collections
+  // new collection from tags in markdown files
+  eleventyConfig.addCollection("testCollection01", function (collection) {
+    var postCollection = collection.getFilteredByTag("post");
+    return postCollection;
+  });
+
   return {
     dir: {
       output: "dist",
