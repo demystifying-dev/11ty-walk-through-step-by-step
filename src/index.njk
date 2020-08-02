@@ -10,8 +10,7 @@ birds:
 {% include "_head.njk" %}
 
     <h1>{{ title }}</h1>
-    <h2>{% shorttest subtitle, greeting %}</h2>
-
+    {% shorttest subtitle, greeting %}
     <ul>
         {%- for bird in birds -%}
         <li>{{ bird }}</li>
