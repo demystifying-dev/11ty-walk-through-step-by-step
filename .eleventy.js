@@ -28,10 +28,17 @@ module.exports = function (eleventyConfig) {
   });
 
   // Collections
+
   // new collection from tags in markdown files
   eleventyConfig.addCollection("testCollection01", function (collection) {
     var postCollection = collection.getFilteredByTag("post");
     return postCollection;
+  });
+
+  // new collection from pagination in Templates
+  eleventyConfig.addCollection("paginationCollection", function (collection) {
+    var pageCollection = collection.getFilteredByGlob("**/fishpaged.njk");
+    return pageCollection;
   });
 
   return {

@@ -13,4 +13,12 @@ title: Collections Test
     </li>
     {% endfor -%}
 </ul>
+
+<h2>New Pagination Collection</h2>
+<ul>
+    {% for item in collections.paginationCollection -%}
+    <li>{{ item.data.title }}, {{ item.url }}, {{ item.date }}, {{ item.data.fishList.fish }}</li>
+    {% endfor -%}
+</ul>
+
 {% include "_foot.njk" %}
